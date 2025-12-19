@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyek Portfolio Muhammad Raihan">
+    <title>Proyek | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='index.html'">Portfolio</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="skills.html">Keahlian</a></li>
+                <li><a href="projects.html" class="active">Proyek</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in" style="min-height: 100vh; padding-top: 120px;">
+        <h2 class="section-title">Proyek Saya</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img class="project-image" id="project1Image" src="images/project1.jpg" alt="Project 1">
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Platform e-commerce modern dengan fitur keranjang belanja, pembayaran online, dan dashboard admin
+                        yang lengkap.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://rahata-store.vercel.app/" class="project-link" target="_blank">Demo</a>
+                        <a href="https://github.com/mraihan777/Rahata-Store.git" class="project-link"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img class="project-image" id="project2Image" src="images/project2.jpg" alt="Project 2">
+                <div class="project-content">
+                    <h3>Bank Sampah</h3>
+                    <p>Bank Sampah adalah platform yang dirancang untuk memudahkan pengguna dalam mengelola sampah
+                        mereka.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://bank-sampah.vercel.app/" class="project-link" target="_blank">Demo</a>
+                        <a href="https://github.com/mraihan777/Bank-Sampah.git" class="project-link"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img class="project-image" id="project3Image" src="images/project3.jpg" alt="Project 3">
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>Website portofolio dengan desain modern, animasi smooth, dan dark mode untuk pengalaman pengguna
+                        yang premium.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://portofolio-pribadi-nine.vercel.app/" class="project-link"
+                            target="_blank">Demo</a>
+                        <a href="https://github.com/mraihan777/Portofolio-Pribadi" class="project-link"
+                            target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Portfolio Pribadi.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

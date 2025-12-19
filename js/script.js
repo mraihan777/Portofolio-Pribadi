@@ -1,3 +1,70 @@
+// ===== LOAD CMS DATA =====
+window.addEventListener('DOMContentLoaded', () => {
+    loadCMSData();
+});
+
+function loadCMSData() {
+    // Load Hero Data
+    const heroData = JSON.parse(localStorage.getItem('heroData'));
+    if (heroData) {
+        document.querySelector('.hero-content h1').textContent = `Halo, Saya ${heroData.name}`;
+        document.querySelector('.hero-content h2').textContent = heroData.title;
+        document.querySelector('.hero-content p').textContent = heroData.description;
+    }
+
+    // Load About Data
+    const aboutData = JSON.parse(localStorage.getItem('aboutData'));
+    if (aboutData) {
+        const aboutText = document.querySelector('.about-text');
+        if (aboutText) {
+            aboutText.querySelector('h3').textContent = aboutData.title;
+            const paragraphs = aboutText.querySelectorAll('p');
+            if (paragraphs[0]) paragraphs[0].textContent = aboutData.para1;
+            if (paragraphs[1]) paragraphs[1].textContent = aboutData.para2;
+            if (paragraphs[2]) paragraphs[2].textContent = aboutData.para3;
+        }
+    }
+
+    // Load Skills Data
+    const skillsData = JSON.parse(localStorage.getItem('skillsData'));
+    if (skillsData && skillsData.length > 0) {
+        const skillsGrid = document.querySelector('.skills-grid');
+        if (skillsGrid) {
+            skillsGrid.innerHTML = skillsData.map(skill => `
+                <div class="skill-card">
+                    <div class="skill-icon">${skill.icon}</div>
+                    <h3>${skill.name}</h3>
+                    <p>${skill.description}</p>
+                </div>
+            `).join('');
+        }
+    }
+
+    // Load Projects Data
+    const projectsData = JSON.parse(localStorage.getItem('projectsData'));
+    if (projectsData && projectsData.length > 0) {
+        const projectsGrid = document.querySelector('.projects-grid');
+        if (projectsGrid) {
+            projectsGrid.innerHTML = projectsData.map((project, index) => `
+                <div class="project-card">
+                    <img class="project-image" id="project${index + 1}Image" src="images/project${(index % 3) + 1}.jpg" alt="${project.name}">
+                    <div class="project-content">
+                        <h3>${project.name}</h3>
+                        <p>${project.description}</p>
+                        <div class="project-tags">
+                            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        <div class="project-links">
+                            ${project.demo ? `<a href="${project.demo}" class="project-link" target="_blank">Demo</a>` : ''}
+                            ${project.github ? `<a href="${project.github}" class="project-link" target="_blank">GitHub</a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+    }
+}
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 const navLinks = document.getElementById('navLinks');
@@ -81,25 +148,49 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact form submission
+// Contact form submission with EmailJS
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    // Get button element
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
 
-    // Simulate form submission (replace with actual API call)
-    console.log('Form Data:', { name, email, message });
+    // Show loading state
+    submitButton.textContent = 'Mengirim...';
+    submitButton.disabled = true;
 
-    // Show success message
-    alert('Terima kasih! Pesan Anda telah terkirim. Saya akan segera menghubungi Anda.');
+    // EmailJS Configuration
+    const serviceID = 'service_tw2es5a';
+    const templateID = 'template_nc4knpl';
 
-    // Reset form
-    contactForm.reset();
+    // Send email using EmailJS
+    emailjs.sendForm(serviceID, templateID, contactForm)
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+
+            // Show success message
+            alert('✅ Terima kasih! Pesan Anda telah berhasil dikirim. Saya akan segera menghubungi Anda.');
+
+            // Reset form
+            contactForm.reset();
+
+            // Reset button
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        })
+        .catch((error) => {
+            console.error('FAILED...', error);
+
+            // Show error message
+            alert('❌ Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi atau hubungi saya melalui email langsung.');
+
+            // Reset button
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        });
 });
 
 // Add typing effect to hero section
