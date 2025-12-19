@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Pribadi - Menampilkan karya dan keahlian saya">
+    <meta name="keywords" content="portofolio, web developer, programmer, desain web">
+    <title>Portofolio Pribadi | Web Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">Portofolio</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><button class="theme-toggle" id="themeToggle">🌙</button></li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Halo, Saya Muhammad Raihan</h1>
+            <h2>Web Developer Front End & Designer</h2>
+            <p>Saya menciptakan pengalaman web yang indah dan fungsional dengan fokus pada detail dan kualitas. Mari
+                wujudkan proyek digital Anda menjadi kenyataan.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+                <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+        <h2 class="section-title">Tentang Saya</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Passionate Web Developer</h3>
+                <p>Saya adalah seorang web developer dengan pengalaman dalam menciptakan aplikasi web yang modern dan
+                    responsif. Dengan keahlian dalam berbagai teknologi web, saya siap membantu mewujudkan visi digital
+                    Anda.</p>
+                <p>Saya percaya bahwa desain yang baik tidak hanya tentang estetika, tetapi juga tentang fungsionalitas
+                    dan pengalaman pengguna yang optimal. Setiap proyek adalah kesempatan untuk belajar dan berkembang.
+                </p>
+                <p>Selain coding, saya juga menikmati kolaborasi dengan tim, berbagi pengetahuan, dan terus mengikuti
+                    perkembangan teknologi terbaru di industri web development.</p>
+            </div>
+            <div class="about-image">
+                <img id="aboutImage" src="images/about.jpg" alt="About Me">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+        <h2 class="section-title">Keahlian Saya</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Membuat website responsif dan interaktif menggunakan HTML, CSS, JavaScript.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Mendesain antarmuka pengguna yang intuitif dan menarik dengan fokus pada pengalaman pengguna yang
+                    optimal.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>Memastikan website terlihat sempurna di semua perangkat, dari smartphone hingga desktop.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">⚡</div>
+                <h3>Performance</h3>
+                <p>Optimisasi kecepatan dan performa website untuk memberikan pengalaman loading yang cepat.</p>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">🚀</div>
+                <h3>Deployment</h3>
+                <p>Mengelola deployment dan hosting aplikasi web menggunakan platform seperti Vercel, Netlify, dan AWS.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2 class="section-title">Proyek Saya</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img class="project-image" id="project1Image" src="images/project1.jpg" alt="Project 1">
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Platform e-commerce modern dengan fitur keranjang belanja, pembayaran online, dan dashboard admin
+                        yang lengkap.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://rahata-store.vercel.app/" class="project-link">Demo</a>
+                        <a href="https://github.com/mraihan777/Rahata-Store.git" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img class="project-image" id="project2Image" src="images/project2.jpg" alt="Project 2">
+                <div class="project-content">
+                    <h3>Bank Sampah</h3>
+                    <p>Bank Sampah adalah platform yang dirancang untuk memudahkan pengguna dalam mengelola sampah
+                        mereka.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://bank-sampah.vercel.app/" class="project-link">Demo</a>
+                        <a href="https://github.com/mraihan777/Bank-Sampah.git" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img class="project-image" id="project3Image" src="images/project3.jpg" alt="Project 3">
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>Website portofolio dengan desain modern, animasi smooth, dan dark mode untuk pengalaman pengguna
+                        yang premium.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan</button>
+            </form>
+
+            <div class="social-links">
+                <a href="#" class="social-link" title="GitHub">📱</a>
+                <a href="#" class="social-link" title="LinkedIn">💼</a>
+                <a href="#" class="social-link" title="Twitter">🐦</a>
+                <a href="#" class="social-link" title="Instagram">📷</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Portofolio Pribadi.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
