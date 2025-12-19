@@ -10,6 +10,16 @@ window.addEventListener('load', () => {
         showAdminPanel();
     }
     loadAllData();
+
+    // Add Enter key support for login
+    const passwordInput = document.getElementById('adminPassword');
+    if (passwordInput) {
+        passwordInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                login();
+            }
+        });
+    }
 });
 
 // Login

@@ -568,6 +568,7 @@ body.dark-mode .project-content p {
 
 body.dark-mode .tag {
   background: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
 }
 
 .project-links {
