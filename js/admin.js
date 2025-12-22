@@ -203,7 +203,7 @@ function loadProjects() {
             name: 'Bank Sampah',
             description: 'Bank Sampah adalah platform yang dirancang untuk memudahkan pengguna dalam mengelola sampah mereka.',
             tags: ['HTML', 'CSS', 'JavaScript'],
-            demo: 'https://bank-sampah.vercel.app/',
+            demo: 'https://bank-sampah-kappa.vercel.app/',
             github: 'https://github.com/mraihan777/Bank-Sampah.git'
         },
         {
