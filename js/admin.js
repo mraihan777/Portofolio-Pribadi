@@ -210,7 +210,7 @@ function loadProjects() {
             name: 'Portfolio Website',
             description: 'Website portofolio dengan desain modern, animasi smooth, dan dark mode untuk pengalaman pengguna yang premium.',
             tags: ['HTML', 'CSS', 'JavaScript'],
-            demo: 'https://portofolio-pribadi-nine.vercel.app/',
+            demo: 'https://portofolio-pribadi-alpha.vercel.app/',
             github: 'https://github.com/mraihan777/Portofolio-Pribadi'
         }
     ];
